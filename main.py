@@ -4,12 +4,11 @@ import numpy as np
 from itertools import permutations
 from plot import MultipleAxisPlot
 
-
 # current positions
 data = json.load(open("example.json"))
 
-collateral = 100000 # usd collateral
-n_tick = 5
+collateral = 80000 # usd collateral
+n_tick = 5 # ticks on axis
 
 if __name__ == "__main__":
 
@@ -24,9 +23,9 @@ if __name__ == "__main__":
     plot.drawAxis(maxvals=prices, names=names)
 
     # create permutations of prices
-    subtotals = np.array([np.linspace(0, prices[idx], n_tick) * factors[idx] * amounts[idx] for idx in range(len(prices))])
-    prices = np.array([np.linspace(0, prices[idx], n_tick) for idx in range(len(prices))])
-    perms = list(permutations(list(range(0, n_tick)), len(prices)))
+    subtotals = np.array([np.linspace(0, prices[idx], n_tick + 1) * factors[idx] * amounts[idx] for idx in range(len(prices))])
+    ticks = np.array([np.linspace(0, prices[idx], n_tick + 1) for idx in range(len(prices))])
+    perms = list(set(permutations(list(range(0, n_tick + 1)) * len(prices), len(prices))))
     indices = tuple(range(len(prices)))
 
     # calculate collateral value and plot
@@ -35,9 +34,8 @@ if __name__ == "__main__":
         total = np.sum(subtotals[idx])
 
         if (total <= collateral) and (0 not in perm):
-            print(perm)
             alpha = total / collateral
-            plot.drawPolygon(prices[idx], alpha = 0.5 * (alpha ** 2))
+            plot.drawPolygon(ticks[idx], alpha = 0.2 * (alpha ** 2))
 
     # plot.drawPolygon([1000.0,  6.0,  3.0, 1.0], 0.8)
     plot.savePlot("plot.png", {'dpi':300})

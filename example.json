@@ -9,7 +9,7 @@
         "amount": 2.0,
         "price": 30000.0
     },
-    "XAUT": {
+    "XAUTUSD": {
         "factor": 0.9,
         "amount": 100.0,
         "price": 1850.0

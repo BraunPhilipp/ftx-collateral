@@ -9,5 +9,3 @@ This tool helps assess USD collateral on FTX for cross-margin positions.
     * number of collateral assets is arbitrary
 
 ![Example Collateral Position](plot.png)
-
-Contributions highly welcome ❤️️

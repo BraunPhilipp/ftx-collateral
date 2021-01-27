@@ -21,7 +21,7 @@ major_tick_length  = 0.015   # length of MAJOR tick markers (the last marker)
 minor_tick_length  = 0.010   # length of MINOR tick markers
 origin_circle_size = major_tick_length / 2   # size of the marker at the origin
 
-tick_label_format = "%i"              # format of the major-tick label
+tick_label_format = "%.1f"              # format of the major-tick label
 tick_label_parallel_pad      = 0.00   # distance between the axis major tick and its label, along the axis direction
 tick_label_perpendicular_pad = 0.08   # distance between the axis major tick and its label, along the direction perpendicular to the axis
 
@@ -31,8 +31,8 @@ hide_plot_frame = True   # whether to hide the subplot frame
 
 # settings for a colorfull plot
 plot_title_properties = {'color':'black', 'fontsize':20, 'horizontalalignment':'center', 'verticalalignment':'center'}
-tick_label_properties = {'color':'blue',  'fontsize':15, 'horizontalalignment':'center', 'verticalalignment':'center'}
-axis_label_properties = {'color':'red',   'fontsize':15, 'horizontalalignment':'center', 'verticalalignment':'center'}
+tick_label_properties = {'color':'blue',  'fontsize':10, 'horizontalalignment':'center', 'verticalalignment':'center'}
+axis_label_properties = {'color':'red',   'fontsize':10, 'horizontalalignment':'center', 'verticalalignment':'center'}
 
 axis_arrow_properties      = {'linestyle':'-', 'linewidth':1.0, 'facecolor':'red', 'edgecolor':'red'}
 
@@ -45,8 +45,8 @@ point_circle_properties    = {'linestyle':'-', 'linewidth':1.0, 'edgecolor':'gre
 
 # settings for a black-and-white plot
 plot_title_properties = {'color':'black', 'fontsize':20, 'horizontalalignment':'center', 'verticalalignment':'center'}
-tick_label_properties = {'color':'black', 'fontsize':15, 'horizontalalignment':'center', 'verticalalignment':'center'}
-axis_label_properties = {'color':'black', 'fontsize':15, 'horizontalalignment':'center', 'verticalalignment':'center'}
+tick_label_properties = {'color':'black', 'fontsize':10, 'horizontalalignment':'center', 'verticalalignment':'center'}
+axis_label_properties = {'color':'black', 'fontsize':10, 'horizontalalignment':'center', 'verticalalignment':'center'}
 
 axis_arrow_properties      = {'linestyle':'-', 'linewidth':1.0, 'facecolor':'black', 'edgecolor':'black'}
 
