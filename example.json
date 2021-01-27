@@ -1,0 +1,17 @@
+{
+    "AMDUSD": {
+        "factor": 0.8,
+        "amount": 100.0,
+        "price": 90.0
+    },
+    "BTCUSD": {
+        "factor": 0.95,
+        "amount": 2.0,
+        "price": 30000.0
+    },
+    "XAUT": {
+        "factor": 0.9,
+        "amount": 100.0,
+        "price": 1850.0
+    }
+}
