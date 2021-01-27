@@ -1,7 +1,12 @@
 # FTX Collateral Estimator
 
-Assessing USD collateral on FTX can be difficult on cross-margin with multiple positions. This tool helps traders estimate price impact on their collateral. This is especially helpful for leveraged positions to estimate liquidation prices.
+This tool helps assess USD collateral on FTX for cross-margin positions.
 
-Contributions and new ideas to model cross-margin positions are highly welcome ❤️️
+* polygons show if USD collateral value is below a certain threshold
+* positions are specified in `example.json`
+    * `factor` specifies FTX weighting factor
+    * `amount` is your current position at `price`
 
 ![Example Collateral Position](plot.png)
+
+Contributions are highly welcome ❤️️
